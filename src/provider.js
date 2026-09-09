@@ -20,7 +20,7 @@
 // Code CLI on this machine, and paste the token it prints into Settings'
 // Local CLI section. It is the exact same accessToken field the sign-in flow
 // fills in, sent the exact same way — this file never shells out to the CLI
-// itself (a plugin page cannot; see docs/PLUGINS.md in App-DraconDex), it only
+// itself (a plugin page cannot; see docs/PLUGINS.md in DraconDex-APP), it only
 // accepts whatever token that CLI already produced.
 
 const ANTHROPIC_BASE = 'https://api.anthropic.com';
