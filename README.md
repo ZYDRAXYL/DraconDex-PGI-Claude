@@ -1,6 +1,6 @@
-# DraconDex-Plugin-Claude
+# DraconDex-PGI-Claude
 
-A Claude chat session for [DraconDex](https://github.com/LDKTC/App-DraconDex),
+A Claude chat session for [DraconDex](https://github.com/ZYDRAXYL/DraconDex-APP),
 docked in place of the Module Inspector.
 
 Install it, open any module, and a **💬** button appears next to the Module
@@ -12,7 +12,7 @@ the room.
 > and works as a plain window (Settings → Plugin → Launch) — there is just no
 > button in the main window, because the panel API doesn't exist there yet.
 > **DraconDex 4.8.0+** additionally auto-installs
-> [AI Native](https://github.com/LDKTC/DraconDex-Plugin-Native) the first time
+> [AI Native](https://github.com/ZYDRAXYL/DraconDex-PGI-AINative) the first time
 > this plugin is installed (see [App context](#app-context-ai-native) below).
 > On older versions this plugin still installs and works exactly the same —
 > the app just doesn't know to look at the manifest's `dependencies` field
@@ -42,7 +42,7 @@ That session's token works the same way. Paste it into Settings → Subscription
 
 This plugin never runs the CLI itself — a plugin page has no process access to
 do that, by design (see
-[App-DraconDex's `docs/PLUGINS.md`](https://github.com/LDKTC/App-DraconDex/blob/main/docs/PLUGINS.md)
+[DraconDex-APP's `docs/PLUGINS.md`](https://github.com/ZYDRAXYL/DraconDex-APP/blob/main/docs/PLUGINS.md)
 §2.4). It only accepts whatever token the CLI already produced, the same way
 it would accept one from Sign-in below.
 
@@ -89,7 +89,7 @@ If neither fits, use API key mode.
 ## App context (AI Native)
 
 This plugin declares
-[DraconDex-Plugin-Native](https://github.com/LDKTC/DraconDex-Plugin-Native)
+[DraconDex-PGI-AINative](https://github.com/ZYDRAXYL/DraconDex-PGI-AINative)
 ("AI Native") as a manifest `dependencies` entry, so installing this plugin
 auto-installs that one too (DraconDex 4.8.0+). AI Native publishes
 `catalog.json` — a small public file describing DraconDex's features and what
@@ -134,7 +134,7 @@ preamble.
     "net": ["https://api.anthropic.com", "https://raw.githubusercontent.com"],
     "context": ["module"]
   },
-  "dependencies": ["https://github.com/LDKTC/DraconDex-Plugin-Native"],
+  "dependencies": ["https://github.com/ZYDRAXYL/DraconDex-PGI-AINative"],
   "tables": [ "…" ]
 }
 ```
@@ -142,7 +142,7 @@ preamble.
 `panels` and `permissions` are the DraconDex 4.3.0 additions; `dependencies`
 is 4.8.0 (see [App context](#app-context-ai-native) above); everything else
 is the plugin format from 4.2.0. Full rules are in
-[App-DraconDex's `docs/PLUGINS.md`](https://github.com/LDKTC/App-DraconDex/blob/main/docs/PLUGINS.md).
+[DraconDex-APP's `docs/PLUGINS.md`](https://github.com/ZYDRAXYL/DraconDex-APP/blob/main/docs/PLUGINS.md).
 
 `permissions.context: ["module"]` lets the panel receive the open module's id,
 name and kind — enough to keep one conversation per module and to title it.
