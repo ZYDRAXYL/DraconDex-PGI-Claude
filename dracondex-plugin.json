@@ -1,7 +1,7 @@
 {
   "id": "claude_chat",
   "name": "Claude Chat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "entry": "index.html",
   "files": [
     "index.html",
